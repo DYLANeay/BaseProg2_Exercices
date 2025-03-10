@@ -1,4 +1,4 @@
-package serie2.ex1;
+package serie2.ex4;
 
 public class Main {
     public static void main(String[] args) {
