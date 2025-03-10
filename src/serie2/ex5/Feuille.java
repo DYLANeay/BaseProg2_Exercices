@@ -1,7 +1,5 @@
 package serie2.ex5;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Feuille {
     private String text;
     private int numberPages;

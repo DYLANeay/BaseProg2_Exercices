@@ -6,8 +6,9 @@ public class Imprimante {
     private String name;
     private String power;
     private int sheetNumber;
-    private ArrayList<Feuille> waitingList;
+    private ArrayList<Feuille> waitingList; //arraylist qui contient toutes mes feuilles
 
+    //constructeur
     public Imprimante(String name, String power, int sheetNumber) {
         this.name = name;
         if (power.equalsIgnoreCase("ON") || power.equalsIgnoreCase("OFF")) {
@@ -60,6 +61,7 @@ public class Imprimante {
         }
     }
 
+    //Ajouter une feuille dans la liste d'attente
     public void addWaitingList(Feuille feuille) {
         this.waitingList.add(feuille);
     }
@@ -74,6 +76,7 @@ public class Imprimante {
         }
     }
 
+
     public int getSheetNumber() {
         return sheetNumber;
     }
@@ -86,6 +89,7 @@ public class Imprimante {
         return this.power;
     }
 
+    //changer le mode d'alim de l'imprimante
     public void changePowerMode(String power) {
         if (power.equalsIgnoreCase("ON") || power.equalsIgnoreCase("OFF")) {
             this.power = power;
