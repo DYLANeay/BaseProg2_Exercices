@@ -1,9 +1,9 @@
-package session3;
+package session4;
 
-import session3.classes.Panier;
-import session3.classes.Produit;
-import session3.classes.Shoes;
-import session3.classes.Table;
+import session4.classes.Panier;
+import session4.classes.Produit;
+import session4.classes.Shoes;
+import session4.classes.Table;
 
 public class Main {
     public static void main(String[] args) {
