@@ -23,6 +23,9 @@ public class Panier {
 
         return total;
     }
+    public String priceCalcul(String monnaie){
+        return "Total price " + priceCalcul() + " " + monnaie;
+    }
 
     public ArrayList<Produit> getPanierListe() {
         return this.panierListe;

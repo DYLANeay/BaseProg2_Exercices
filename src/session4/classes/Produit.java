@@ -1,14 +1,14 @@
 package session4.classes;
 
-public class Produit {
+public abstract class Produit {
     private String name;
     private int price;
     private int shippingCost;
 
-    public Produit(String name, int price, int shippingCost){
+    public Produit(String name, int price){
         this.name=name;
         this.price=price;
-        this.shippingCost=shippingCost;
+//        this.shippingCost=shippingCost;
     }
 
     public String getName() {
@@ -19,7 +19,9 @@ public class Produit {
         return price;
     }
 
-    public int getShippingCost() {
-        return shippingCost;
-    }
+    public abstract int getShippingCost();
+
+//    public int getShippingCost() {
+//        return shippingCost;
+//    }
 }
