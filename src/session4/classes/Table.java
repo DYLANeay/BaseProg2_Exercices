@@ -4,7 +4,7 @@ public class Table extends Produit {
     private int poids;
 
     public Table(String name, int price, int poids){
-        super(name, price);
+        super(name, price); // donc crée tout de même une instance de Produit, même abstrait
         this.poids=poids;
     }
 
