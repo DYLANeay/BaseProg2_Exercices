@@ -7,10 +7,13 @@ public abstract class Produit {
 
     public static int shareByAllInstance = 0;
 
+    public static int counter = 0;
+
     public Produit(String name, int price){
         this.name=name;
         this.price=price;
 //        this.shippingCost=shippingCost;
+        counter++;
     }
 
     public String getName() {
@@ -26,6 +29,10 @@ public abstract class Produit {
     }
 
     public abstract int getShippingCost();
+
+    public static int incrementCounter(){
+        return counter++;
+    }
 
 //    public int getShippingCost() {
 //        return shippingCost;

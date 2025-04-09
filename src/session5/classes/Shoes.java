@@ -7,6 +7,7 @@ public class Shoes extends Produit implements Wearables{
     public Shoes(String name, int price, int size){
         super(name, price); //crée une instance de produit, obligatoire
         this.size=size;
+
     }
 
     @Override

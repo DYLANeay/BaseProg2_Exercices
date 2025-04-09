@@ -2,6 +2,8 @@ package session5;
 
 import session5.classes.*;
 
+import static session5.classes.Produit.counter;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -42,8 +44,12 @@ public class Main {
 
         System.out.println(d1.getDownloadLink());
 
+        System.out.println(Produit.shareByAllInstance);
+        af1.shareByAllInstance = 1;
+        System.out.println(af1.shareByAllInstance);
+        System.out.println(af1.getShareByAllInstance());
 
-
+        System.out.println(counter);
 
         //simplement afficher les différentes properties de chaque class
         /*for(Produit p : panier.getPanierListe()){
