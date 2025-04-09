@@ -7,13 +7,17 @@ public abstract class Produit {
 
     public static int shareByAllInstance = 0;
 
-    public static int counter = 0;
+    private static int counter = 0;
 
     public Produit(String name, int price){
         this.name=name;
         this.price=price;
 //        this.shippingCost=shippingCost;
         counter++;
+    }
+
+    public static int getCounter(){
+        return counter;
     }
 
     public String getName() {

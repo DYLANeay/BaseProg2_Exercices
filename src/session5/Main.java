@@ -2,7 +2,9 @@ package session5;
 
 import session5.classes.*;
 
-import static session5.classes.Produit.counter;
+import java.math.BigDecimal;
+
+import static session5.classes.Produit.getCounter;
 
 public class Main {
     public static void main(String[] args) {
@@ -49,7 +51,16 @@ public class Main {
         System.out.println(af1.shareByAllInstance);
         System.out.println(af1.getShareByAllInstance());
 
-        System.out.println(counter);
+        System.out.println(getCounter());
+
+        //big decimal essai
+        BigDecimal n1 = BigDecimal.valueOf(0.3);
+        BigDecimal n2 = BigDecimal.valueOf(0.5);
+        BigDecimal n3 = n1.add(n2);
+        System.out.println(n3); // donne exactement la valeur attendue, contrairement à double qui aurait essayé d'arrondir bizarrement
+
+
+
 
         //simplement afficher les différentes properties de chaque class
         /*for(Produit p : panier.getPanierListe()){
