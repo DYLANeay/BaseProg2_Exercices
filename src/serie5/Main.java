@@ -9,8 +9,16 @@ public class Main {
         PaypalPayment pp1 = new PaypalPayment("dylan.eray@gmail.com");
         CreditCardPayment ccp1 = new CreditCardPayment(223110, "Dylan", "03.04.2029");
 
-        bp1.pay(20, ba1);
-        pp1.pay(20,ba1);
-        ccp1.pay(20,ba1);
+//        bp1.pay(20, ba1);
+//        pp1.pay(20,ba1);
+//        ccp1.pay(20,ba1);
+
+        ba1.addPaymentMethod(bp1);
+        ba1.addPaymentMethod(pp1);
+        ba1.addPaymentMethod(ccp1);
+
+        for (PaymentMethod pm : ba1.getListOfPaymentMethod()){
+            pm.pay(10, ba1);
+        }
     }
 }

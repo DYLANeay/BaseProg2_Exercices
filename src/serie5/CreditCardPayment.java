@@ -30,6 +30,7 @@ public class CreditCardPayment implements PaymentMethod{
         if (amount>0 && destinationAccount.getBalance()>amount) {
             destinationAccount.remove(amount);
             System.out.println("Payment of " + amount + " made using Credit Card : " + getCardNumber() + ", " + getCardHolder() + ", " + getExpiryDate() + " on BankAcc");
+
         }else if (amount<0 && destinationAccount.getBalance()<amount){
         System.out.println("Error, not enough money m8");
     }
