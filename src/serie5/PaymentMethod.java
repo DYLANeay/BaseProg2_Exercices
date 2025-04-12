@@ -1,6 +1,8 @@
 package serie5;
 
 
+import java.math.BigDecimal;
+
 interface PaymentMethod {
-    void pay(double amount, BankAccount destinationAccount);
+    void pay(BigDecimal amount, BankAccount destinationAccount);
 }

@@ -1,5 +1,7 @@
 package serie5;
 
+import java.math.BigDecimal;
+
 public class BitcoinPayment implements PaymentMethod {
     private String walletAdress ="";
     public BitcoinPayment(String walletAdress){
@@ -9,12 +11,12 @@ public class BitcoinPayment implements PaymentMethod {
 
 
     @Override
-    public void pay(double amount, BankAccount destinationAccount) {
-        if (amount>0 && destinationAccount.getBalance()>amount){
+    public void pay(BigDecimal amount, BankAccount destinationAccount) {
+        if (amount.compareTo(BigDecimal.ZERO) > 0 && destinationAccount.getBalance().compareTo(amount) >= 0) {
             destinationAccount.remove(amount);
             System.out.println("Payment of " + amount + " made using Bitcoin having wallet address : " + getWalletAdress() + " on BankAcc");
-        }else if (amount<0 && destinationAccount.getBalance()<amount){
-            System.out.println("Error, not enough money m8");
+        }else {
+            System.out.println("Error: Invalid amount or insufficient funds");
         }
     }
 

@@ -1,9 +1,11 @@
 package serie5;
 
+import java.math.BigDecimal;
+
 public class Main {
     public static void main(String[] args) {
 
-        BankAccount ba1 = new BankAccount(231231, 2000);
+        BankAccount ba1 = new BankAccount(231231, BigDecimal.valueOf(2000));
 
         BitcoinPayment bp1 = new BitcoinPayment("asfbfkdxxx");
         PaypalPayment pp1 = new PaypalPayment("dylan.eray@gmail.com");
@@ -18,7 +20,13 @@ public class Main {
         ba1.addPaymentMethod(ccp1);
 
         for (PaymentMethod pm : ba1.getListOfPaymentMethod()){
-            pm.pay(10, ba1);
+            pm.pay(BigDecimal.valueOf(19), ba1);
         }
+
+        System.out.println(ba1.getBalance());
+
+        ba1.addInterest();
+
+        System.out.println(ba1.getBalance());
     }
 }
