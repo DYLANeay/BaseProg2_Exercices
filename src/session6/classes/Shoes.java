@@ -1,4 +1,4 @@
-package session5.classes;
+package session6.classes;
 
 public class Shoes extends Produit implements Wearables {
 

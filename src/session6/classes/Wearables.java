@@ -1,4 +1,4 @@
-package session5.classes;
+package session6.classes;
 
 public interface Wearables {
         int getSize();
