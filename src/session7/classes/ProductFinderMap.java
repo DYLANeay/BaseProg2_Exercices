@@ -2,15 +2,15 @@ package session7.classes;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class ProductFinderMap implements ProductFinder{
-    private Map<Integer,Produit> prods = new HashMap<Integer,Produit>();
+    private Map<Integer,Produit> prods = new TreeMap<>(); // garantit l'ordre, au contraire de HashMap !
 
     @Override
     public Produit findById(Integer id) {
         if (id == null) {
-            // You can either return null or throw an exception based on your application's requirements
-            return null; // or throw new IllegalArgumentException("Id cannot be null");
+            return null;
         }
         return prods.get(id);
     }

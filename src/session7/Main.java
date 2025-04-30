@@ -34,6 +34,15 @@ public class Main {
         for (Map.Entry<Integer,Produit> entry : pf.getProds().entrySet()){
             System.out.println(entry.getKey() + ", " + entry.getValue());
         } // infos incomplète car se base sur ToString pour retourner les valeurs
+
+        Map<String, String> stringMap = new TreeMap<>(new StringComparator());
+        stringMap.put("hey","hey");
+        stringMap.put("hoi","hoi");
+        for (Map.Entry<String,String> entry : stringMap.entrySet()){
+            System.out.println(entry.getKey() + ", " + entry.getValue());
+        }
+
+
     }
 
     public static void getTime() {
