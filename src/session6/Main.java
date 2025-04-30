@@ -3,11 +3,11 @@ package session6;
 import session6.classes.*;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 import static session6.classes.Produit.getCounter;
+
+
 
 public class Main {
     public static void main(String[] args) {
@@ -81,6 +81,33 @@ public class Main {
             }
         }
 
+        getTime();
+
+        //FIFO implementation
+        Deque<String> newDeque = new ArrayDeque<>();
+        newDeque.add("first"); //LIFO : push
+        newDeque.add("second");
+        newDeque.add("third");
+
+        System.out.println(newDeque.size());
+        System.out.println(newDeque.poll()); //LIFO : pop
+        System.out.println(newDeque.size());
+
+
+/*
+        System.out.println(System.currentTimeMillis());
+        for(int i = 0; i<30000; i++){
+            timeArrayList.add(0,i);
+        }
+        System.out.println(System.currentTimeMillis());
+
+        System.out.println("------------------------------");
+
+        System.out.println(System.currentTimeMillis());
+        for(int i = 0; i<300000; i++){
+            timeLinkedList.add(0,i);
+        }
+        System.out.println(System.currentTimeMillis());*/
 
 
         //simplement afficher les différentes properties de chaque class
@@ -111,4 +138,22 @@ public class Main {
 
 
     }
-}
+
+    public static void getTime() {
+        ArrayList<Integer> timeArrayList = new ArrayList<>();
+        LinkedList<Integer> timeLinkedList = new LinkedList<>();
+
+        // Measure time for ArrayList
+        double beginTimeArray = System.currentTimeMillis();
+        for (int i = 0; i < 300000; i++) {
+            timeArrayList.add(0, i);
+        }
+        System.out.println("Time taken by ArrayList: " + (System.currentTimeMillis() - beginTimeArray) + " ms");
+
+        // Measure time for LinkedList
+        double beginTimeLinked = System.currentTimeMillis();
+        for (int i = 0; i < 300000; i++) {
+            timeLinkedList.add(0, i);
+        }
+        System.out.println("Time taken by LinkedList: " + (System.currentTimeMillis() - beginTimeLinked) + " ms");
+    }}
