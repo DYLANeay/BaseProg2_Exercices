@@ -23,8 +23,38 @@ public class Main {
         Produit Ekedalen = new Table("Ekedalen", 190, 20);
         Produit adobe = new License("Adobe CC", 800, 2, "www.bs.ch" );
         Produit photoshop = new App("Photoshop", 90, 2, "www.yo.ch");
+        Produit indesign = new App("InDesign", 90, 2, "www.yo.ch");
+        Produit indesign2 = new App("InDesign", 90, 2, "www.yo.ch");
         Downloadables d1 = new App("Illustrator", 90, 2, "yooyoyo.ch");
 
+        Set<App> appSet = new HashSet<>();
+        appSet.add((App) photoshop);
+        appSet.add ((App) indesign);
+        appSet.add ((App) indesign2);
+
+        for (App a : appSet){
+            System.out.println(a.getName());
+        }
+
+        System.out.println(appSet.size());
+
+
+
+        Set<String> monSet = new HashSet<>();
+        monSet.add("aaa");
+        monSet.add("bbbb");
+        monSet.add("ccc");
+        monSet.add("ccc");
+       // System.out.println(monSet.size());/* seulement 3 car valeures uniques obligatoires dans Set */
+
+       for (String s : monSet){
+           System.out.println();
+       }
+
+
+
+
+        /*
         ProductFinderMap pf= new ProductFinderMap();
         pf.addProduit(af1);
         pf.addProduit(Ekedalen);
@@ -42,7 +72,7 @@ public class Main {
             System.out.println(entry.getKey() + ", " + entry.getValue());
         }
 
-
+*/
     }
 
     public static void getTime() {
